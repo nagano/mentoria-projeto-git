@@ -1,0 +1,25 @@
+/* TEXT */
+.text--align-center { text-align: center; }
+
+/* FONT */
+.font--weight-600 { font-weight: 600; }
+.font--weight-500 { font-weight: 500; }
+
+/* FLEXBOX */
+.flex { display: flex; }
+.flex.justify-content--start { justify-content: flex-start; }
+.flex.justify-content--center { justify-content: center; }
+.flex.justify-content--end { justify-content: flex-end; }
+.flex.justify-content--space-between { justify-content: space-between; }
+.flex.justify-content--space-around { justify-content: space-around; }
+.flex.justify-content--space-evenly { justify-content: space-evenly; }
+.flex.align-items--start { align-items: flex-start; }
+.flex.align-items--center { align-items: center; }
+.flex.align-items--end { align-items: flex-end; }
+
+/* MARGIN */
+.mb-8 { margin-bottom: 8px }
+.mb-16 { margin-bottom: 16px }
+.mb-24 { margin-bottom: 24px }
+.mb-32 { margin-bottom: 32px }
+.mb-48 { margin-bottom: 48px }

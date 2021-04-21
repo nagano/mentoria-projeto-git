@@ -1,0 +1,372 @@
+body {
+    font-family: 'Montserrat', sans-serif;
+    color: #252B42;
+    background-color: #FAFAFA;
+    font-weight: 700;
+}
+
+button {
+    cursor: pointer;
+}
+
+/**************/
+/*** HEADER ***/
+/**************/
+
+.main-header {
+    min-height: 112px;
+    padding: 30px 24px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    background-color: #FFFFFF;
+}
+
+#logo {
+    height: 52px;
+    width: 104px;
+}
+
+.main-header__logo-container {
+    width: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+#hamburger {
+    display: none;
+}
+
+#hamburger:checked + nav.main-header__navigation {
+    display: flex;
+}
+
+.main-header__navigation {
+    display: none;
+    flex-direction: column;
+    align-items: center;
+}
+
+.main-header__navigation > a {
+    text-decoration: none;
+    font-size: 16px;
+    line-height: 28px;
+    color: #252B42;
+}
+
+.main-header__navigation > a.home {
+    color: #FA4A0C;
+}
+
+@media (min-width: 576px) {
+    .main-header {
+        flex-direction: row;
+    }
+
+    #logo {
+        width: 206px;
+    }
+
+    .main-header__logo-container > label {
+        display: none;
+    }
+
+    .main-header__navigation {
+        display: flex;
+        flex-direction: row;
+    }
+
+    .main-header__navigation > a:not(:last-child) {
+        margin-right: 114px;
+    }
+}
+
+/***************/
+/**** FRONT ****/
+/***************/
+
+.front {
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding: 48px 8px 0 8px;
+}
+
+.front header > h5 {
+    font-size: 16px;
+    line-height: 24px;
+}
+
+.front header > h1 {
+    font-size: 36px;
+    line-height: 42.5px;
+}
+
+.front__buttons-container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.front main > h4 {
+    font-size: 24px;
+    line-height: 38px;
+}
+
+.front__buttons-container > button.primary,
+.front__buttons-container > button.secondary {
+    font-size: 24px;
+    line-height: 36px;
+    padding: 16px;
+    border: 1px solid #FA4A0C;
+    border-radius: 30px;
+    min-width: 236px;
+}
+
+.front__buttons-container > button.primary:focus,
+.front__buttons-container > button.secondary:focus {
+    outline: none;
+}
+
+.front__buttons-container > button.primary {
+    color: #FFFFFF;
+    background-color: #FA4A0C;
+}
+
+.front__buttons-container > button.secondary {
+    color: #FA4A0C;
+    background-color: #FFFFFF;
+}
+
+.front > img {
+    width: 90%;
+    max-width: 580px;
+}
+
+@media (min-width: 576px) {
+    .front {
+        background-image: linear-gradient(0deg, rgba(23, 16, 16, 0.4), rgba(23, 16, 16, 0.4)), url("../assets/plates-background.svg");
+        background-repeat: no-repeat;
+        background-size: 100% 619px;
+        color: #FFFFFF;
+    }
+
+    .front__buttons-container {
+        flex-direction: row;
+    }
+
+    .front__buttons-container > button.primary {
+        margin-right: 16px;
+        margin-bottom: 0;
+    }
+
+    .front__buttons-container > button.secondary {
+        color: #FFFFFF;
+        background-color: transparent;
+        border-color: #FFFFFF;
+        margin-bottom: 0;
+    }
+}
+
+
+
+.separator {
+    width: 100%;
+    border-top: 3px solid #E4E4E4;
+    margin: 48px auto;
+}
+
+@media (min-width: 576px) {
+    .separator {
+        max-width: 848px;
+    }
+}
+
+
+
+/******************/
+/**** TUTORIAL ****/
+/******************/
+
+.tutorial > h2 {
+    font-size: 44px;
+    line-height: 36px;
+}
+
+.tutorial__step {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding: 0 8px;
+}
+
+.tutorial__step-content > h3 {
+    font-size: 24px;
+    line-height: 36px;
+    text-align: center;
+    color: #FA4A0C;
+}
+
+.tutorial__step-content > h2 {
+    font-size: 40px;
+    line-height: 57px;
+    text-align: center;
+}
+
+.tutorial__step-content > h4 {
+    font-size: 24px;
+    line-height: 36px;
+    text-align: center;
+}
+
+@media (min-width: 576px) {
+    .tutorial__step {
+        flex-direction: row-reverse;
+        justify-content: space-around;
+        max-width: 1210px;
+        padding-bottom: 56px;
+        margin: 0 auto;
+    }
+
+    .tutorial__step.reverse {
+        flex-direction: row;
+        justify-content: space-around;
+    }
+
+    .tutorial__step-content {
+        width: 55%;
+    }
+
+    .tutorial__step-content > h2,
+    .tutorial__step-content > h3,
+    .tutorial__step-content > h4 {
+        text-align: left;
+    }
+
+    .tutorial__image-container {
+        width: 35%;
+        display: flex;
+        justify-content: center;
+    }
+}
+
+/******************/
+/**** DOWNLOAD ****/
+/******************/
+
+.download {
+    background-color: #252B42;
+    padding: 80px 10px;
+}
+
+.download > h2 {
+    font-size: 40px;
+    line-height: 57px;
+    color: #FFFFFF;
+}
+
+.download > h4 {
+    font-size: 24px;
+    line-height: 36px;
+    color: #BDBDBD;
+}
+
+.download__buttons-container {
+    display: flex;
+    justify-content: center;
+}
+
+.download__buttons-container > button.primary,
+.download__buttons-container > button.secondary {
+    font-size: 16px;
+    line-height: 28px;
+    padding: 16px 32px;
+    border-width: 1px;
+    border-style: solid;
+    border-radius: 10px;
+}
+
+.download__buttons-container > button.primary:focus,
+.download__buttons-container > button.secondary:focus {
+    outline: none;
+}
+
+.download__buttons-container > button.primary {
+    color: #FFFFFF;
+    background-color: #FA4A0C;
+    border-color: #FA4A0C;
+    margin-right: 16px;
+}
+
+.download__buttons-container > button.secondary {
+    color: #FFFFFF;
+    background-color: #252B42;
+    border-color: #FFFFFF;
+}
+
+@media (min-width: 576px) {
+    .download {
+        background-color: transparent;
+        background-image: linear-gradient(0deg, rgba(37, 43, 66, 0.4), rgba(37, 43, 66, 0.4)), url("../assets/wall-background.svg");
+        background-repeat: no-repeat;
+        background-size: 100% 516px;
+    }
+
+    .download > h4 {
+        color: #FFFFFF;
+    }
+
+    .download__buttons-container > button.secondary {
+        background-color: transparent;
+    }
+}
+
+/****************/
+/**** FOOTER ****/
+/****************/
+
+.main-footer {
+    padding: 64px 0;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.main-footer > #logo {
+    display: none;
+}
+
+.main-footer__icons-container {
+    display: flex;
+    justify-content: center;
+    margin-bottom: 12px;
+}
+
+.main-footer__icons-container > img:not(:last-child) {
+    margin-right: 32px;
+
+}
+
+.main-footer > p {
+    font-size: 12px;
+    line-height: 18px;
+}
+
+@media (min-width: 576px) {
+    .main-footer {
+        flex-direction: row;
+        justify-content: space-between;
+        max-width: 1210px;
+        margin: 0 auto;
+    }
+
+    .main-footer > #logo {
+        display: unset;
+    }
+
+    .main-footer__icons-container {
+        margin-bottom: 0;
+    }
+}
